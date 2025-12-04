@@ -13,7 +13,7 @@ permissions:
 jobs:
   release-please:
     name: Release Please
-    runs-on: runs-on=${{ github.run_id }}/runner=1cpu-linux-arm64
+    runs-on: ubuntu-latest
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
       version: ${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}
